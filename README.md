@@ -10,7 +10,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-## Test de react
+## Test de react con typeScript
 
 1 - Hacer una lista de cuidadores con lo que viene en esta [API](https://sheetsu.com/apis/v1.0su/581ad5595d0d) <br>
 2 - Integrar redux para mantener la lista de los cuidadores.<br>
