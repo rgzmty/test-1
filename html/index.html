@@ -6,7 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-      /* Your CSS Here */
+      header, aside, footer {
+          color: white;
+          text-align: center;
+          padding-top: 1em;
+          padding-bottom: 1em;
+      }
+      header {
+          background-color: red;
+      }
+      .content {
+          display: grid;
+          grid-template-columns: 12em auto;
+      }
+      aside {
+          background-color: purple;
+      }
+      main {
+          background-color: dodgerblue;
+          display: grid;
+          grid-template-columns: 7em auto 7em;
+          grid-template-rows: 6em 15em 6em;
+          grid-template-areas:
+              "item-1 item-1 item-4"
+              "item-2 item-3 item-4"
+              "item-2 item-5 item-5"
+          ;
+          grid-gap: 1ex;
+          padding: 1ex;
+      }
+      .item {
+          background-color: white;
+          text-align: center;
+          display: table-cell;
+          vertical-align: middle;
+      }
+      .item-1 { grid-area: item-1; }
+      .item-2 { grid-area: item-2; }
+      .item-3 { grid-area: item-3; }
+      .item-4 { grid-area: item-4; }
+      .item-5 { grid-area: item-5; }
+      footer {
+          background-color: green;
+      }
+      @media all and (max-width: 600px) {
+          .content {
+              display: block;
+          }
+          main {
+              grid-template-columns: 7em auto 7em;
+              grid-template-rows: 3em 5em 3em;
+              grid-template-areas:
+                  "item-2 item-1 item-1"
+                  "item-2 item-3 item-4"
+                  "item-5 item-5 item-4"
+              ;
+          }
+      }
     </style>
 </head>
 <body>

@@ -1,21 +1,24 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import CareTakerFormContainer from './containers/CareTakerFormContainer.js'
+import CareTakerListContainer from './containers/CareTakerListContainer.js'
+import LoadingAlertContainer from './containers/LoadingAlertContainer.js'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-export default App;
+const App = () =>
+    <div>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a className="navbar-brand" href=".">Cuida Mi Mascota</a>
+        </nav>
+        <div className="container-fluid">
+            <CareTakerFormContainer />
+        </div>
+        <div className="container-fluid">
+            <CareTakerListContainer />
+        </div>
+        <div className="container-fluid">
+            <LoadingAlertContainer />
+        </div>
+    </div>
+
+export default App
