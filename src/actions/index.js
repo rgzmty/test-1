@@ -16,6 +16,12 @@ export const fetchCareTakers = () => async dispatch => {
     try {
         const response = await fetch('https://sheetsu.com/apis/v1.0su/581ad5595d0d')
         const data = await response.json()
+
+        if (data.error) {
+            alert(data.error)
+            return
+        }
+
         for (const item of data) {
             dispatch(addCareTaker({
                 country: item.pais,
